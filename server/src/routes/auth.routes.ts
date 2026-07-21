@@ -18,7 +18,7 @@ router.post("/register", async (req, res) => {
     data: { fullName, age, email, password: hashed },
   });
 
-  await sendWelcomeEmail(email, fullName);
+  sendWelcomeEmail(email, fullName);
   res.status(201).json({ message: "Registered successfully" });
 });
 

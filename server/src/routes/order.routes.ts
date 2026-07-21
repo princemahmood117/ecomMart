@@ -27,7 +27,7 @@ router.post("/", protect, async (req: AuthRequest, res) => {
     include: { items: { include: { product: true } } },
   });
 
-  await sendOrderEmail(email, fullName, order.items[0]?.product.name ?? "your item", order.items[0]?.productId ?? "");
+  sendOrderEmail(email, fullName, order.items[0]?.product.name ?? "your item", order.items[0]?.productId ?? "");
   res.status(201).json(order);
 });
 
