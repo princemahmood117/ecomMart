@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-pink: #e8a0bf;
+  --color-brand-dark: #2b1d24;
+  --font-display: "Poppins", sans-serif;
+}
+
+body {
+  font-family: var(--font-display);
+}
